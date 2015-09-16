@@ -1,0 +1,31 @@
+var x;
+var y;
+var easing;
+var flying = false;
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	background(355);
+    easing = .05
+    x = width/2;
+    y = height/2;
+    
+}
+
+function draw() {
+	houseDraw(mouseX, mouseY);
+    
+}
+
+function houseDraw(x,y) {
+    rect(x, y, 50, 50);
+    triangle(x-10, y, x+25, y-20, x+60, y);
+    
+    
+	var eX = (mouseX - x) * easing;
+	var eY = (mouseY - y) * easing;
+    x = x + eX;
+    y = y + eY;
+    
+  }
+
