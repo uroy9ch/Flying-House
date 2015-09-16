@@ -3,8 +3,6 @@ var y;
 var easing;
 var flying = false;
 
-
-
 // Run at the beginning of the sketch
 function setup() {
 	createCanvas(windowWidth, windowHeight);
